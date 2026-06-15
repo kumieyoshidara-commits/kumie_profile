@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コクー株式会社 — 経歴詳細 | 吉田 久美絵</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #3D2C5C;
+    --navy-mid: #5B4080;
+    --navy-light: #EFE9F8;
+    --terra: #9B6EB5;
+    --terra-light: #F4EEF9;
+    --sand: #F8F5FC;
+    --text: #2E1F4A;
+    --text-muted: #8A7AA0;
+    --border: #E0D8EE;
+    --white: #FFFFFF;
+  }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--sand);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  .header {
+    background: #EDE6F6;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--navy-mid);
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 14px;
+    background: white;
+  }
+  .back-btn:hover { background: var(--navy-light); }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    color: var(--navy);
+    font-weight: 700;
+  }
+  .header-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-left: auto;
+    letter-spacing: 1px;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 16px 60px;
+  }
+
+  /* 会社情報カード */
+  .company-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+  }
+  .company-info-item {
+    display: flex;
+    gap: 12px;
+    min-width: 200px;
+  }
+  .company-info-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    width: 72px;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .company-info-value {
+    font-size: 13px;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* セクション */
+  .section { margin-bottom: 36px; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* プロジェクトカード */
+  .project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .project-period {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .project-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .project-sub {
+    font-size: 12px;
+    color: var(--terra);
+    margin-bottom: 14px;
+  }
+  .project-body {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.85;
+  }
+  .project-body p { margin-bottom: 8px; }
+  .project-body ul {
+    padding-left: 16px;
+    margin-bottom: 8px;
+  }
+  .project-body li { margin-bottom: 4px; }
+
+  /* 実績バッジ */
+  .achievement {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--terra-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: var(--navy-mid);
+    font-weight: 500;
+    margin: 4px 4px 0 0;
+  }
+  .achievement-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .tag {
+    display: inline-block;
+    background: var(--navy-light);
+    color: var(--navy-mid);
+    font-size: 11px;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 3px 3px 0 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="index.html" class="back-btn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    プロフィールに戻る
+  </a>
+  <div class="header-title">コクー株式会社 — 経歴詳細</div>
+  <div class="header-sub">2019.11 — 現在</div>
+</div>
+
+<div class="container">
+
+  <!-- 会社情報 -->
+  <div class="company-card">
+    <div class="company-info-item">
+      <div class="company-info-label">勤務先</div>
+      <div class="company-info-value">コクー株式会社</div>
+    </div>
+    <div class="company-info-item">
+      <div class="company-info-label">雇用形態</div>
+      <div class="company-info-value">正社員</div>
+    </div>
+    <div class="company-info-item">
+      <div class="company-info-label">役職</div>
+      <div class="company-info-value">グループマネージャー</div>
+    </div>
+    <div class="company-info-item">
+      <div class="company-info-label">社員数</div>
+      <div class="company-info-value">936名</div>
+    </div>
+    <div class="company-info-item">
+      <div class="company-info-label">期間</div>
+      <div class="company-info-value">2019年11月 〜 現在</div>
+    </div>
+    <div class="company-info-item">
+      <div class="company-info-label">業種</div>
+      <div class="company-info-value">人材サービス・BPO・DXコンサルティング</div>
+    </div>
+  </div>
+
+  <!-- プロジェクト実績1 -->
+  <div class="section">
+    <div class="section-label">プロジェクト実績</div>
+
+    <div class="project-card">
+      <div class="project-period">2019年11月 — 2023年7月</div>
+      <div class="project-title">PayPay株式会社 常駐（業務委託）</div>
+      <div class="project-sub">BPOコンサルタント → スーパーバイザー / プロジェクトリーダー</div>
+      <div class="project-body">
+        <p><strong>● 2019年12月 〜 2020年9月：決済事業プロジェクト（経済産業省主導）</strong></p>
+        <p>根雪案件（停滞案件）の解消対応に従事。スキームの再構築により、停滞案件の消化率を大幅に改善。</p>
+        <div style="margin:10px 0;">
+          <span class="achievement"><span class="achievement-num">70%</span>案件消化率に向上</span>
+        </div>
+        <hr class="divider">
+        <p><strong>● 2020年9月 〜 2023年7月：自治体キャンペーン支援（総務省主導）</strong></p>
+        <ul>
+          <li>計5部門を統括するSVとして、傘下15名の業務進行管理およびリソース最適化を遂行</li>
+          <li>部門間の課題抽出とフロー改善の内部提案を実施</li>
+          <li>SQLとGASを組み合わせた業務自動化により工数を大幅削減</li>
+        </ul>
+        <div style="margin:10px 0;">
+          <span class="achievement"><span class="achievement-num">15名</span>傘下統括</span>
+          <span class="achievement"><span class="achievement-num">60h</span>月次工数削減</span>
+          <span class="achievement"><span class="achievement-num">850%</span>売上昨対比達成</span>
+        </div>
+        <div style="margin-top:12px;">
+          <span class="tag">SQL / GAS</span>
+          <span class="tag">5部門統括</span>
+          <span class="tag">PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-period">2023年7月 — 現在</div>
+      <div class="project-title">イーブックイニシアティブジャパン株式会社 常駐（業務委託）</div>
+      <div class="project-sub">BPOプロジェクト責任者</div>
+      <div class="project-body">
+        <p><strong>● 業務オペレーションの改善・DX推進</strong></p>
+        <ul>
+          <li>現状の業務フローを可視化し、標準化・ドキュメント化を完遂</li>
+          <li>GAS・独自ツールを用いた業務自動化を提案・導入し、手作業によるミスを削減</li>
+          <li>3部署・計15名の組織マネジメントおよびメンバーの目標管理・育成を担当</li>
+          <li>マニュアルや作業ツールのウォークスルーレビューを通じ、チーム全体の生産性を向上</li>
+        </ul>
+        <div style="margin:10px 0;">
+          <span class="achievement"><span class="achievement-num">40%</span>手作業ミス削減</span>
+          <span class="achievement"><span class="achievement-num">20%</span>生産性向上</span>
+          <span class="achievement"><span class="achievement-num">15名</span>3部署マネジメント</span>
+        </div>
+        <div style="margin-top:12px;">
+          <span class="tag">GAS / 独自ツール</span>
+          <span class="tag">ドキュメント化</span>
+          <span class="tag">BPO改善</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-period">2025年7月 — 現在</div>
+      <div class="project-title">DXコンサルティング事業部 マネージャー（社内）</div>
+      <div class="project-sub">オンボード設計責任者 / 戦略的人材開発プロジェクト統括</div>
+      <div class="project-body">
+        <p><strong>● 複数プロジェクトのオンボード設計・標準化</strong></p>
+        <ul>
+          <li>異なる業種・課題を持つ複数プロジェクトに対し「標準オンボードパッケージ」を策定</li>
+          <li>クライアントの決裁層との合意形成から現場へのオペレーション落とし込みまでを一気通貫で設計</li>
+        </ul>
+        <div style="margin:8px 0 14px;">
+          <span class="achievement"><span class="achievement-num">5件</span>並行管理</span>
+          <span class="achievement"><span class="achievement-num">20%</span>立ち上げ工数削減</span>
+        </div>
+        <p><strong>● 戦略的人材開発プロジェクトの推進</strong></p>
+        <ul>
+          <li>市場調査に基づき需要急増スキルを特定し、教育カリキュラムを開発・実施</li>
+          <li>育成メンバーを適正プロジェクトへ配置し、提供価値（単価・顧客満足度）を向上</li>
+        </ul>
+        <div style="margin:8px 0 14px;">
+          <span class="achievement"><span class="achievement-num">50名</span>リスキリング完遂</span>
+        </div>
+        <div style="margin-top:12px;">
+          <span class="tag">オンボード設計</span>
+          <span class="tag">人材開発</span>
+          <span class="tag">リスキリング</span>
+          <span class="tag">DXコンサル</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 社内貢献 -->
+  <div class="section">
+    <div class="section-label">社内貢献・マネジメント</div>
+
+    <div class="project-card">
+      <div class="project-title" style="margin-bottom:16px;">組織基盤強化への貢献</div>
+      <div class="project-body">
+        <p><strong>① 人事評価制度の設計・提言（社内人事評価委員会）</strong></p>
+        <ul>
+          <li>評価の属人化・基準の曖昧さに対し、労務管理および評価制度の再構築を提案</li>
+          <li>定量・定性・情意評価のバランスを最適化した評価基準を策定</li>
+          <li>自部門のエンゲージメントサーベイで8割の満足度を継続達成</li>
+        </ul>
+        <hr class="divider">
+        <p><strong>② 女性活躍推進委員会（委員長就任）</strong></p>
+        <p>「女性が会社に来ることが楽しみになる施策」をテーマに、ジェンダーレスな制度を立案・設計。</p>
+        <ul style="margin-top:8px;">
+          <li>ビジネスメイク講座・タイムマネジメント講座・コーチングセッションの企画運営</li>
+          <li>ベビーシッター利用補助制度・スライドワーク（時差出勤）制度の導入</li>
+        </ul>
+        <div style="margin-top:12px;">
+          <span class="tag">人事評価設計</span>
+          <span class="tag">女性活躍推進</span>
+          <span class="tag">制度設計</span>
+          <span class="tag">エンゲージメント</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

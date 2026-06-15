@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吉田 久美絵 | プロフィール</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #3D2C5C;
+    --navy-mid: #5B4080;
+    --navy-light: #EFE9F8;
+    --terra: #9B6EB5;
+    --terra-light: #F4EEF9;
+    --sand: #F8F5FC;
+    --text: #2E1F4A;
+    --text-muted: #8A7AA0;
+    --border: #E0D8EE;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--sand);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* Hero */
+  .hero {
+    background: #EDE6F6;
+    color: #3D2C5C;
+    padding: 56px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(155,110,181,0.15);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: rgba(155,110,181,0.08);
+  }
+  .avatar {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: #9B6EB5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Noto Serif JP', serif;
+    letter-spacing: 2px;
+  }
+  .hero-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+  }
+  .hero-name-en {
+    font-size: 13px;
+    color: rgba(61,44,92,0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-tagline {
+    font-size: 14px;
+    color: rgba(61,44,92,0.75);
+    line-height: 1.9;
+    max-width: 480px;
+    margin: 0 auto 24px;
+  }
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .hero-tag {
+    border: 1px solid rgba(91,64,128,0.25);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: rgba(61,44,92,0.7);
+    letter-spacing: 0.5px;
+  }
+
+  /* Content */
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 16px 60px;
+  }
+
+  /* Section */
+  .section {
+    margin-top: 40px;
+  }
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Phrase — the hook */
+  .phrase {
+    background: var(--white);
+    border-left: 3px solid var(--terra);
+    padding: 20px 24px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 24px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    color: var(--navy);
+    line-height: 1.9;
+    text-align: center;
+  }
+
+  /* Strength cards */
+  .strength-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  @media (max-width: 480px) {
+    .strength-grid { grid-template-columns: 1fr; }
+  }
+  .strength-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px;
+  }
+  .strength-icon {
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    background: var(--terra-light);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 12px;
+    font-size: 17px;
+  }
+  .strength-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .strength-body {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  /* Career timeline */
+  .timeline {
+    position: relative;
+    margin-top: 4px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 8px; bottom: 8px;
+    width: 1px;
+    background: var(--border);
+  }
+  .tl-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .tl-dot {
+    width: 17px; height: 17px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--navy-mid);
+    flex-shrink: 0;
+    margin-top: 3px;
+    z-index: 1;
+  }
+  .tl-dot.current {
+    background: var(--terra);
+    border-color: var(--terra);
+  }
+  .tl-body {}
+  .tl-period {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .tl-company {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .tl-role {
+    font-size: 12px;
+    color: var(--terra);
+    margin-bottom: 6px;
+  }
+  .tl-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+  .tl-badge {
+    display: inline-block;
+    background: var(--navy-light);
+    color: var(--navy-mid);
+    font-size: 11px;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 4px 4px 0 0;
+  }
+
+  /* Achievement numbers */
+  .numbers-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 4px;
+  }
+  @media (max-width: 400px) {
+    .numbers-row { grid-template-columns: 1fr; }
+  }
+  .num-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .num-value {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .num-unit {
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 400;
+  }
+  .num-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  /* Footer CTA */
+  .cta-block {
+    margin-top: 48px;
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    color: white;
+  }
+  .cta-block p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 12px;
+    line-height: 1.8;
+  }
+  .cta-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="avatar">久</div>
+  <div class="hero-name">吉田　久美絵</div>
+  <div class="hero-name-en">Kumie Yoshida</div>
+  <div class="hero-tagline">
+    仕組みがなく、人が困っている、でも誰も言語化できていない場所に価値を出す。組織と事業をつなぎ、人の成長で事業の可能性を最大化する。
+  </div>
+  <div class="hero-tags">
+    <span class="hero-tag">組織開発</span>
+    <span class="hero-tag">業務推進 / BizOps</span>
+    <span class="hero-tag">人材育成</span>
+    <span class="hero-tag">DXコンサルティング</span>
+  </div>
+  <div style="margin-top:24px; padding: 0 16px;">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; max-width:560px; margin:0 auto;">
+      <a href="https://drive.google.com/drive/folders/1JtVztOJGPi5vKcuw0UFWk-JH6phjMrpU" target="_blank" style="
+        display:inline-flex; align-items:center; gap:10px;
+        background:rgba(255,255,255,0.6); border:1px solid rgba(91,64,128,0.18);
+        border-radius:10px; padding:12px 16px;
+        text-decoration:none;
+        font-size:13px; font-weight:500;
+        flex:1; min-width:180px;
+      " onmouseover="this.style.background='rgba(255,255,255,0.85)'" onmouseout="this.style.background='rgba(255,255,255,0.6)'">
+        <span style="width:32px;height:32px;border-radius:7px;background:rgba(184,92,56,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F5C4A0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </span>
+        <span>
+          <span style="display:block; font-size:13px; font-weight:700; color:#3D2C5C;">職務経歴書 · 履歴書</span>
+          <span style="display:block; font-size:11px; color:#8A7AA0; margin-top:1px;">Google Drive で開く</span>
+        </span>
+        <svg style="margin-left:auto; opacity:0.3;" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B4080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <a href="portfolio.html" style="
+        display:inline-flex; align-items:center; gap:10px;
+        background:rgba(255,255,255,0.6); border:1px solid rgba(91,64,128,0.18);
+        border-radius:10px; padding:12px 16px;
+        text-decoration:none;
+        font-size:13px; font-weight:500;
+        flex:1; min-width:180px;
+      " onmouseover="this.style.background='rgba(255,255,255,0.85)'" onmouseout="this.style.background='rgba(255,255,255,0.6)'">
+        <span style="width:32px;height:32px;border-radius:7px;background:rgba(45,64,104,0.5);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B6EB5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </span>
+        <span>
+          <span style="display:block; font-size:13px; font-weight:700; color:#3D2C5C;">デザインポートフォリオ</span>
+          <span style="display:block; font-size:11px; color:#8A7AA0; margin-top:1px;">制作実績を見る</span>
+        </span>
+        <svg style="margin-left:auto; opacity:0.3;" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5B4080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Hook phrase -->
+  <div class="section">
+    <div class="section-label">About me</div>
+    <div class="phrase">
+      「課題を見て、構造化し、人を巻き込んで完遂する」<br>
+      経営から現場まで一気通貫の実行力を持つ人材です
+    </div>
+  </div>
+
+  <!-- Achievement numbers -->
+  <div class="section">
+    <div class="section-label">実績ハイライト</div>
+    <div class="numbers-row">
+      <div class="num-card">
+        <div class="num-value">850<span class="num-unit">%</span></div>
+        <div class="num-label">担当部門の売上<br>昨対比達成（PayPay常駐）</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value">60<span class="num-unit">h</span></div>
+        <div class="num-label">SQL+GASで<br>月次工数削減</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value">40<span class="num-unit">名</span></div>
+        <div class="num-label">社内リクルーティング<br>単独で企画・完遂</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value">50<span class="num-unit">名</span></div>
+        <div class="num-label">Groupマネージャーとして<br>傘下メンバーを統括</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value">10<span class="num-unit">名</span></div>
+        <div class="num-label">係長4名・主任6名を<br>配下から輩出</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value">3<span class="num-unit">本</span></div>
+        <div class="num-label">育成研修を<br>半年間で構築</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Strengths -->
+  <div class="section">
+    <div class="section-label">強み</div>
+    <div class="strength-grid">
+      <div class="strength-card">
+        <div class="strength-icon">🗂</div>
+        <div class="strength-title">課題の言語化・構造化</div>
+        <div class="strength-body">複雑な状況をWBSに落とし、誰が何をすべきか分解して完遂まで持っていける。「推進力」と「構造化設計能力」は第三者評価でも最上位の強み。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">🏗</div>
+        <div class="strength-title">組織・制度の設計</div>
+        <div class="strength-body">採用・育成・評価・施策を「この組織に何が必要か」から逆算して設計。女性活躍委員会委員長として複数制度を牽引。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">🌱</div>
+        <div class="strength-title">人を見て、育てること</div>
+        <div class="strength-body">配下メンバーから主任・チームリーダー10名を輩出。相手のポテンシャルを見抜き、必要な課題と支援を与えられる現場型の育成者。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-icon">⚡</div>
+        <div class="strength-title">推進・段取り・調整力</div>
+        <div class="strength-body">混乱した現場で「こう進めよう」と道筋を作れるタイプ。レスポンスが速く、責任感を持って最後まで完遂する。複数部署間の調整も一人で回す。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Career -->
+  <div class="section">
+    <div class="section-label">キャリア</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot current"></div>
+        <div class="tl-body">
+          <div class="tl-period">2019年11月 — 現在</div>
+          <div class="tl-company">コクー株式会社</div>
+          <div class="tl-role">BPOコンサルタント → 組織開発・人材育成リード</div>
+          <div class="tl-desc">PayPay・eBook Initiative Japanへの常駐BPO支援を経て、AI事業部・DX事業部の組織開発・研修体系・人事評価制度設計を担当。</div>
+          <div>
+            <span class="tl-badge">客先プロジェクト5部門15名統括</span>
+            <span class="tl-badge">自社50名統括</span>
+            <span class="tl-badge">PM・OJT研修設計</span>
+            <span class="tl-badge">女性活躍推進委員会委員長</span>
+          </div>
+          <div style="margin-top:12px;">
+            <a href="cocoo.html" style="font-size:12px; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:6px; font-weight:500; background:var(--terra); padding:8px 16px; border-radius:20px;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              プロジェクト詳細を見る
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-period">2012年6月 — 2019年10月</div>
+          <div class="tl-company">株式会社アイデム</div>
+          <div class="tl-role">営業サポート → 企画資料作成専任（抜擢）</div>
+          <div class="tl-desc">求人広告・採用コンサル領域で、データ分析・提案資料作成・新人育成・業務改善・人事評価制度設計に従事。月30本の企画資料を担当。</div>
+          <div>
+            <span class="tl-badge">Excel VBA / Salesforce</span>
+            <span class="tl-badge">リモート育成4名</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-period">2011年5月 — 2012年1月</div>
+          <div class="tl-company">株式会社VIXリンクユース</div>
+          <div class="tl-role">派遣コーディネーター</div>
+          <div class="tl-desc">採用・育成・稼働管理・現場ラウンドまでを一括担当。人材マネジメントの基礎を習得。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-period">2010年4月 — 2011年5月</div>
+          <div class="tl-company">明治安田生命保険相互会社</div>
+          <div class="tl-role">法人営業職</div>
+          <div class="tl-desc">警察署・民間企業を担当し、ヒアリングと課題把握を軸にした提案営業を経験。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Documents & Portfolio -->
+  <div class="section">
+    <div class="section-label">書類 · ポートフォリオ</div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="https://drive.google.com/drive/folders/1JtVztOJGPi5vKcuw0UFWk-JH6phjMrpU" target="_blank" style="
+        display:inline-flex; align-items:center; gap:10px;
+        background:var(--white); border:1px solid var(--border);
+        border-radius:10px; padding:14px 20px;
+        text-decoration:none; color:var(--navy);
+        font-size:13px; font-weight:500;
+        transition: box-shadow 0.2s;
+        flex:1; min-width:200px;
+      " onmouseover="this.style.boxShadow='0 2px 12px rgba(27,42,74,0.10)'" onmouseout="this.style.boxShadow='none'">
+        <span style="width:36px;height:36px;border-radius:8px;background:var(--terra-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9B6EB5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+        </span>
+        <span>
+          <span style="display:block; font-size:13px; font-weight:700; color:var(--navy);">職務経歴書 · 履歴書</span>
+          <span style="display:block; font-size:11px; color:var(--text-muted); margin-top:2px;">Google Drive で開く</span>
+        </span>
+        <svg style="margin-left:auto; opacity:0.35;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <a href="career_portfolio.html" style="
+        display:inline-flex; align-items:center; gap:10px;
+        background:var(--white); border:1px solid var(--border);
+        border-radius:10px; padding:14px 20px;
+        text-decoration:none; color:var(--navy);
+        font-size:13px; font-weight:500;
+        transition: box-shadow 0.2s;
+        flex:1; min-width:200px;
+      " onmouseover="this.style.boxShadow='0 2px 12px rgba(27,42,74,0.10)'" onmouseout="this.style.boxShadow='none'">
+        <span style="width:36px;height:36px;border-radius:8px;background:var(--navy-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B4080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </span>
+        <span>
+          <span style="display:block; font-size:13px; font-weight:700; color:var(--navy);">キャリアポートフォリオ</span>
+          <span style="display:block; font-size:11px; color:var(--text-muted); margin-top:2px;">強み・実績・育成マップ</span>
+        </span>
+        <svg style="margin-left:auto; opacity:0.35;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a href="portfolio.html" style="
+        display:inline-flex; align-items:center; gap:10px;
+        background:var(--white); border:1px solid var(--border);
+        border-radius:10px; padding:14px 20px;
+        text-decoration:none; color:var(--navy);
+        font-size:13px; font-weight:500;
+        transition: box-shadow 0.2s;
+        flex:1; min-width:200px;
+      " onmouseover="this.style.boxShadow='0 2px 12px rgba(27,42,74,0.10)'" onmouseout="this.style.boxShadow='none'">
+        <span style="width:36px;height:36px;border-radius:8px;background:var(--navy-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B4080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </span>
+        <span>
+          <span style="display:block; font-size:13px; font-weight:700; color:var(--navy);">デザインポートフォリオ</span>
+          <span style="display:block; font-size:11px; color:var(--text-muted); margin-top:2px;">制作実績を見る</span>
+        </span>
+        <svg style="margin-left:auto; opacity:0.35;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <div class="cta-title">お気軽にお声がけください</div>
+    <p>
+      組織開発 / 業務推進 / 人材育成 / BizOps<br>
+      人と仕組みをつなぐことに、全力で向き合います。
+    </p>
+    <p style="font-size:12px; color:rgba(255,255,255,0.45); margin-bottom:0;">吉田 久美絵 ／ Kumie Yoshida</p>
+  </div>
+
+</div>
+</body>
+</html>
